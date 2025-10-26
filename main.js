@@ -235,27 +235,6 @@
   /* Cursor */
   function initializeCursor() {
     const cursor = document.querySelector('.cursor');
-    const follower = document.querySelector('.cursor-follower');
-    if (!cursor || !follower) return;
-
-    let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
-    let fx = mouseX, fy = mouseY;
-
-    document.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      cursor.style.left = mouseX + 'px';
-      cursor.style.top = mouseY + 'px';
-    });
-
-    function loop() {
-      fx += (mouseX - fx) * 0.12;
-      fy += (mouseY - fy) * 0.12;
-      follower.style.left = fx + 'px';
-      follower.style.top = fy + 'px';
-      requestAnimationFrame(loop);
-    }
-    loop();
 
     // hover interactions
     const hoverables = document.querySelectorAll('a,button,.skill-tag,.cert-card,.leadership-card');
@@ -334,3 +313,4 @@
   }
 
 })();
+
