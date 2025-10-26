@@ -21,7 +21,8 @@
   --transition: all 0.32s cubic-bezier(.22,.9,.32,1);
   --shadow-subtle: 0 6px 18px rgba(2,6,23,0.06);
   --shadow-card: 0 12px 30px rgba(2,6,23,0.06);
-  --shadow-glow: 0 10px 30px rgba(0,103,184,0.14);
+  --shadow-glow: 0 10px 30px rgba(255, 215, 0, 0.35);
+   
   --border-radius:12px;
   --border-radius-lg:18px;
   --container-max-width:1200px;
@@ -167,5 +168,6 @@ footer a{color:#cfe8ff;text-decoration:underline}
 @media (prefers-reduced-motion: reduce){
   *{animation:none !important;transition:none !important}
 }
+
 
 
