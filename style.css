@@ -85,7 +85,6 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:16px;max-w
 .profile-image{width:100%;height:100%;object-fit:cover;border-radius:50%;border:4px solid rgba(0,103,184,0.12);box-shadow:var(--shadow-glow);opacity:0;transition:opacity .5s ease}
 .profile-image.loaded{opacity:1}
 .profile-fallback{display:flex;align-items:center;justify-content:center;border-radius:50%;background:var(--gradient-primary);color:#fff}
-.profile-glow{position:absolute;inset:-22px;border-radius:50%;background:var(--gradient-secondary);opacity:0.12;filter:blur(28px);animation:pulse 4s ease-in-out infinite}
 @keyframes pulse{0%,100%{transform:scale(1);opacity:0.12}50%{transform:scale(1.12);opacity:0.18}}
 
 /* Section title */
@@ -168,6 +167,7 @@ footer a{color:#cfe8ff;text-decoration:underline}
 @media (prefers-reduced-motion: reduce){
   *{animation:none !important;transition:none !important}
 }
+
 
 
 
