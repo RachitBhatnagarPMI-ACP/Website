@@ -33,8 +33,6 @@
 html,body{height:100%;background:var(--bg-color);color:var(--text-color);-webkit-font-smoothing:antialiased}
 
 /* Cursor */
-.cursor{width:12px;height:12px;border:2px solid var(--accent-color);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;background:rgba(0,103,184,0.06);mix-blend-mode:normal;transform:translate(-50%,-50%);transition:all 0.12s ease}
-.cursor-follower{width:6px;height:6px;border-radius:50%;position:fixed;pointer-events:none;z-index:9998;background:var(--accent-color);transform:translate(-50%,-50%);transition:all 0.16s ease}
 .cursor-hover{transform:scale(2);background:rgba(0,103,184,0.12)}
 
 /* Layout container */
@@ -176,3 +174,4 @@ footer a{color:#cfe8ff;text-decoration:underline}
 @media (prefers-reduced-motion: reduce){
   *{animation:none !important;transition:none !important}
 }
+
