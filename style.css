@@ -22,7 +22,8 @@
   --shadow-glow: 0 10px 30px rgba(0,103,184,0.14);
   --border-radius:12px;
   --border-radius-lg:18px;
-  --container-max-width:1200px;
+  --container-max-width:1500px;
+
   --max-mobile: 768px;
 }
 
@@ -36,29 +37,37 @@ html,body{height:100%;background:var(--bg-color);color:var(--text-color);-webkit
 /* Layout container */
 .container{max-width:var(--container-max-width);margin:0 auto;padding:0 20px}
 
-/* Header (new modern style) */
-header{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  z-index:1200;
-  background:rgba(255,255,255,0.96);
-  backdrop-filter:blur(10px);
-  box-shadow:0 4px 14px rgba(2,6,23,0.06);
-  border-bottom:1px solid rgba(15,23,36,0.06);
-  padding:0;
+/* Header (new modern style - full width only for header) */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1200;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 14px rgba(2, 6, 23, 0.06);
+  border-bottom: 1px solid rgba(15, 23, 36, 0.06);
 }
 
-/* ✅ Updated nav for full-width header */
-nav{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
-  width:100%;
-  margin:0;
-  padding:12px 28px;
+/* ✅ Full-width nav only — keeps rest of site centered */
+header > nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100vw;                         /* Full viewport width */
+  margin-left: calc(50% - 50vw);         /* Pulls nav to exact left edge */
+  padding: 10px 20px;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.98) 0%,
+    rgba(255,255,255,0.90) 100%
+  );
+  backdrop-filter: blur(8px);
+  border-radius: 0;
+  box-shadow: var(--shadow-subtle);
+  border-bottom: 1px solid var(--card-border);
 }
 
 .logo{display:flex;align-items:center;gap:14px}
@@ -120,7 +129,7 @@ nav{
 .stat-number{font-family:Playfair Display,serif;font-size:2rem;background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .stat-label{color:var(--text-muted);font-size:0.95rem;margin-top:6px}
 
-/* SKILLS */
+/* SKILLS (kept Neeti-like) */
 .skills{padding:100px 0;background:var(--bg-secondary)}
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
 .skill-category{background:var(--card-bg);padding:22px;border-radius:16px;border:1px solid var(--card-border);box-shadow:var(--shadow-card)}
@@ -177,6 +186,7 @@ footer a{color:#cfe8ff;text-decoration:underline}
   .nav-links{display:none}
   .menu-btn{display:block}
 }
+
 @media (max-width:768px){
   .hero{padding:80px 0}
   .hero-content{grid-template-columns:1fr;gap:30px}
