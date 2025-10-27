@@ -22,7 +22,7 @@
   --shadow-glow: 0 10px 30px rgba(0,103,184,0.14);
   --border-radius:12px;
   --border-radius-lg:18px;
-  --container-max-width:1200px;
+ /* --container-max-width:1200px;*/
   --max-mobile: 768px;
 }
 
@@ -163,6 +163,7 @@ footer a{color:#cfe8ff;text-decoration:underline}
 @media (prefers-reduced-motion: reduce){
   *{animation:none !important;transition:none !important}
 }
+
 
 
 
