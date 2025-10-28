@@ -93,7 +93,7 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:16px;max-w
 .highlight-icon{width:56px;height:56px;background:var(--gradient-secondary);border-radius:12px;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-glow)}
 
 /* STATS GRID */
-.stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .stat-card{background:var(--card-bg);padding:28px;border-radius:14px;border:1px solid var(--card-border);text-align:center;box-shadow:var(--shadow-card)}
 .stat-number{font-family:Playfair Display,serif;font-size:2rem;background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .stat-label{color:var(--text-muted);font-size:0.95rem;margin-top:6px}
@@ -163,4 +163,5 @@ footer a{color:#cfe8ff;text-decoration:underline}
 @media (prefers-reduced-motion: reduce){
   *{animation:none !important;transition:none !important}
 }
+
 
